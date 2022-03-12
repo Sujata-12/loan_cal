@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 class RepeatedCard extends StatelessWidget {
-  const RepeatedCard({required this.textField});
+  const RepeatedCard({ required this.labelText, required this.onPressed});
 
-  final Widget textField;
+  final String labelText;
+  final Function(String) onPressed;
+
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +14,13 @@ class RepeatedCard extends StatelessWidget {
       child: Card(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
-          child: textField,
+          child: TextField(
+           onChanged: onPressed,
+
+            decoration:  InputDecoration(labelText: labelText),
+            keyboardType: TextInputType.number,
+
+          ),
         ),
       ),
     );
