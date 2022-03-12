@@ -7,7 +7,7 @@ import '../controllers/home_controller.dart';
 class HomeView extends GetView<HomeController> {
   const HomeView({Key? key}) : super(key: key);
 
-  // final String _emiResult = "";
+ 
 
 
 
@@ -68,7 +68,7 @@ class HomeView extends GetView<HomeController> {
             const SizedBox(
               height: 20,
             ),
-            // emiResult(emiResult)
+            
           ],
         ),
       ),
